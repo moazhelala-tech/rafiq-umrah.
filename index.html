@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d5b49">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="رفيق العمرة">
+<link rel="manifest" href="manifest.webmanifest">
+<title>رفيق العمرة</title>
+<style>
+:root{--green:#0d5b49;--green2:#14745d;--gold:#c7a45b;--ink:#18352e;--muted:#71817b;--paper:#f5f7f3;--card:#fff;--line:#e4eae4}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Arabic","Geeza Pro",Tahoma,sans-serif;padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+header{background:linear-gradient(145deg,#0b493c,#14745d);color:white;padding:calc(24px + env(safe-area-inset-top)) 20px 25px;border-radius:0 0 28px 28px}
+.top{display:flex;justify-content:space-between;align-items:center}.brand{font-size:13px;opacity:.8}.hero{font-size:27px;font-weight:800;margin:15px 0 5px}.sub{font-size:13px;opacity:.85}.verse{margin-top:18px;padding:14px;border:1px solid #ffffff38;border-radius:16px;background:#ffffff12;font-size:17px;line-height:1.9;text-align:center}
+main{max-width:650px;margin:auto;padding:18px 15px}.section-title{font-size:19px;font-weight:800;margin:8px 2px 13px}.card{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:16px;margin-bottom:13px;box-shadow:0 4px 15px #163b2910}.muted{color:var(--muted);font-size:13px;line-height:1.7}.step{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.step:last-child{border:0}.num{background:#e8f1eb;color:var(--green);width:31px;height:31px;flex:none;border-radius:11px;display:grid;place-items:center;font-weight:800}.step h3{margin:1px 0 5px;font-size:15px}.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}
+.tabs{position:fixed;bottom:0;left:0;right:0;background:#ffffffed;backdrop-filter:blur(15px);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:9px 5px calc(9px + env(safe-area-inset-bottom));z-index:5}.tab{border:0;background:none;color:#75837d;font:inherit;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:4px 10px}.tab b{font-size:20px;font-weight:500}.tab.active{color:var(--green);font-weight:800}
+.hidden{display:none!important}.counter{display:flex;align-items:center;justify-content:space-between;gap:10px}.count{font-size:39px;font-weight:850;color:var(--green);font-variant-numeric:tabular-nums}.btn{border:0;border-radius:14px;background:var(--green);color:white;padding:13px 16px;font:inherit;font-weight:750;font-size:14px}.btn.light{background:#eaf2ed;color:var(--green)}.btn:disabled{opacity:.4}.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.progress{height:8px;background:#e9eee9;border-radius:20px;overflow:hidden;margin:12px 0}.progress span{display:block;height:100%;background:var(--green2);width:0;transition:.2s}
+.arabic{font-size:20px;line-height:2;text-align:center;font-weight:650}.dua-title{font-weight:800;margin-bottom:7px}.check{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}.check:last-child{border:0}.check input{width:19px;height:19px;accent-color:var(--green);margin-top:1px}.check input:checked+span{text-decoration:line-through;color:#829087}
+.pill{display:inline-block;background:#e8f1eb;color:var(--green);padding:5px 10px;border-radius:30px;font-size:11px;font-weight:800}.notice{background:#fff8e9;border:1px solid #f0e2bf;border-radius:14px;padding:12px;font-size:12px;line-height:1.8;color:#705b2f}.footer{text-align:center;color:var(--muted);font-size:11px;padding:12px}
+</style>
+</head>
+<body>
+<header>
+ <div class="top"><div class="brand">دليلك الهادئ في رحلتك</div><span class="pill">النسخة التجريبية</span></div>
+ <div class="hero">رفيق العمرة 🕋</div>
+ <div class="sub">خطوة بخطوة… واذكر الله بقلب مطمئن</div>
+ <div class="verse">لَبَّيْكَ اللَّهُمَّ عُمْرَةً<br><small>اللهم يسّرها وتقبّلها</small></div>
+</header>
+<main>
+<section id="home">
+ <div class="section-title">أهلًا بك في رحاب العمرة</div>
+ <div class="card">
+  <div style="font-weight:800;margin-bottom:5px">رحلتك تبدأ بالنية</div>
+  <div class="muted">استخدم الدليل والعدادات لتتابع المناسك، واحفظ الأدعية التي تحب تكرارها.</div>
+  <div class="btnrow"><button class="btn" onclick="show('guide')">ابدأ دليل العمرة ←</button><button class="btn light" onclick="show('counter')">فتح العدادات</button></div>
+ </div>
+ <div class="section-title">المناسك باختصار</div>
+ <div class="card">
+  <div class="step"><div class="num">١</div><div><h3>الإحرام والنية</h3><p>من الميقات، وفق ترتيب رحلتك وأحكام الإحرام.</p></div></div>
+  <div class="step"><div class="num">٢</div><div><h3>الطواف</h3><p>سبعة أشواط حول الكعبة، تبدأ بمحاذاة الحجر الأسود.</p></div></div>
+  <div class="step"><div class="num">٣</div><div><h3>السعي</h3><p>سبعة أشواط بين الصفا والمروة، تبدأ بالصفا وتنتهي بالمروة.</p></div></div>
+  <div class="step"><div class="num">٤</div><div><h3>الحلق أو التقصير</h3><p>وبذلك تكتمل العمرة بإذن الله.</p></div></div>
+ </div>
+ <div class="notice">تذكير: لا يوجد دعاء مخصوص واجب لكل شوط. ادعُ بما تيسر، وتجنب المزاحمة والتدافع.</div>
+</section>
+
+<section id="guide" class="hidden">
+ <div class="section-title">دليل أداء العمرة</div>
+ <div class="card">
+  <div class="step"><div class="num">١</div><div><h3>الإحرام والنية</h3><p>الاغتسال والتجهز قبل الميقات، ثم نية الدخول في العمرة والتلبية. للرجل ملابس الإحرام، وللمرأة لباسها الساتر المعتاد.</p></div></div>
+  <div class="step"><div class="num">٢</div><div><h3>التلبية</h3><p>لبيك اللهم لبيك، لبيك لا شريك لك لبيك، إن الحمد والنعمة لك والملك، لا شريك لك.</p></div></div>
+  <div class="step"><div class="num">٣</div><div><h3>الطواف</h3><p>سبعة أشواط، تجعل الكعبة عن يسارك، وتبدأ كل شوط بمحاذاة الحجر الأسود وتنهيه عنده. لا تزاحم لاستلام الحجر.</p></div></div>
+  <div class="step"><div class="num">٤</div><div><h3>ركعتا الطواف وزمزم</h3><p>صلّ ركعتين حيث يتيسر دون مزاحمة، ثم اشرب من ماء زمزم.</p></div></div>
+  <div class="step"><div class="num">٥</div><div><h3>السعي</h3><p>ابدأ بالصفا وانتهِ بالمروة. الذهاب من الصفا إلى المروة شوط، والعودة شوط آخر. سبعة أشواط إجمالًا.</p></div></div>
+  <div class="step"><div class="num">٦</div><div><h3>الحلق أو التقصير</h3><p>الرجل يحلق أو يقصر شعر رأسه، والحلق أفضل. والمرأة تقصر قدرًا يسيرًا من أطراف شعرها.</p></div></div>
+ </div>
+ <div class="notice">قد تختلف بعض التفاصيل باختلاف المذهب أو الحالة الشخصية؛ اسأل مرشدًا موثوقًا أو جهة إفتاء معتمدة عند وجود ظرف خاص.</div>
+</section>
+
+<section id="counter" class="hidden">
+ <div class="section-title">عداد الطواف والسعي</div>
+ <div class="card">
+  <div style="font-weight:800">الطواف حول الكعبة</div><div class="muted">سجّل شوطًا بعد إتمام دورة كاملة.</div>
+  <div class="counter"><div class="count" id="tawafNum">٠ / ٧</div><span class="pill" id="tawafStatus">لم يبدأ</span></div>
+  <div class="progress"><span id="tawafBar"></span></div>
+  <div class="btnrow"><button class="btn" onclick="inc('tawaf')">＋ تسجيل شوط</button><button class="btn light" onclick="reset('tawaf')">إعادة</button></div>
+ </div>
+ <div class="card">
+  <div style="font-weight:800">السعي بين الصفا والمروة</div><div class="muted">الذهاب من الصفا للمروة شوط، والعودة شوط.</div>
+  <div class="counter"><div class="count" id="saiNum">٠ / ٧</div><span class="pill" id="saiStatus">ابدأ بالصفا</span></div>
+  <div class="progress"><span id="saiBar"></span></div>
+  <div class="muted" id="saiDirection">الشوط الأول: الصفا ← المروة</div>
+  <div class="btnrow"><button class="btn" onclick="inc('sai')">＋ تسجيل شوط</button><button class="btn light" onclick="reset('sai')">إعادة</button></div>
+ </div>
+ <div class="notice">العداد وسيلة للتذكير فقط. إذا شككت في عدد الأشواط، فاسأل مرشدًا موثوقًا عن التصرف المناسب.</div>
+</section>
+
+<section id="duas" class="hidden">
+ <div class="section-title">أدعية وأذكار</div>
+ <div class="card"><div class="dua-title">التلبية</div><div class="arabic">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ.</div></div>
+ <div class="card"><div class="dua-title">دعاء جامع</div><div class="arabic">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ.</div></div>
+ <div class="card"><div class="dua-title">دعاء دخول المسجد</div><div class="arabic">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ.</div></div>
+ <div class="card"><div class="dua-title">دعاء من القلب</div><div class="arabic">اللهم تقبل عمرتي، واغفر ذنبي، واشرح صدري، ويسر أمري، وارزقني الإخلاص والقبول.</div></div>
+ <div class="notice">لا يلزم دعاء معين لكل شوط من الطواف أو السعي؛ ادعُ بما تحب من خيري الدنيا والآخرة.</div>
+</section>
+
+<section id="packing" class="hidden">
+ <div class="section-title">قائمة تجهيزات السفر</div>
+ <div class="card"><div class="dua-title">الأوراق والسفر</div>
+  <label class="check"><input type="checkbox"><span>جواز السفر والتأشيرة</span></label><label class="check"><input type="checkbox"><span>تذاكر الطيران وحجز الفندق</span></label><label class="check"><input type="checkbox"><span>نسخ إلكترونية من المستندات</span></label><label class="check"><input type="checkbox"><span>بطاقة الهوية ووسائل الدفع</span></label>
+ </div>
+ <div class="card"><div class="dua-title">الملابس والمستلزمات</div>
+  <label class="check"><input type="checkbox"><span>ملابس الإحرام (للرجال)</span></label><label class="check"><input type="checkbox"><span>ملابس مناسبة ومريحة</span></label><label class="check"><input type="checkbox"><span>حذاء مريح للمشي</span></label><label class="check"><input type="checkbox"><span>حقيبة صغيرة وشبشب</span></label><label class="check"><input type="checkbox"><span>مستلزمات النظافة الشخصية</span></label>
+ </div>
+ <div class="card"><div class="dua-title">الأجهزة والاحتياجات</div>
+  <label class="check"><input type="checkbox"><span>الهاتف والشاحن</span></label><label class="check"><input type="checkbox"><span>بطارية متنقلة</span></label><label class="check"><input type="checkbox"><span>الأدوية المعتادة والوصفات</span></label><label class="check"><input type="checkbox"><span>عنوان الفندق ورقم المرافق</span></label>
+ </div>
+</section>
+<div class="footer">رفيق العمرة • تقبّل الله طاعتكم</div>
+</main>
+<nav class="tabs">
+ <button class="tab active" data-tab="home" onclick="show('home')"><b>⌂</b>الرئيسية</button>
+ <button class="tab" data-tab="guide" onclick="show('guide')"><b>☷</b>المناسك</button>
+ <button class="tab" data-tab="counter" onclick="show('counter')"><b>◉</b>العداد</button>
+ <button class="tab" data-tab="duas" onclick="show('duas')"><b>۞</b>الأدعية</button>
+ <button class="tab" data-tab="packing" onclick="show('packing')"><b>✓</b>التجهيز</button>
+</nav>
+<script>
+const get=(k)=>Number(localStorage.getItem(k)||0);
+function show(id){document.querySelectorAll('main section').forEach(s=>s.classList.toggle('hidden',s.id!==id));document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'});}
+function ar(n){return String(n).replace(/[0-9]/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);}
+function draw(k){let n=get(k),done=n>=7;document.getElementById(k+'Num').textContent=ar(n)+' / ٧';document.getElementById(k+'Bar').style.width=(n/7*100)+'%';document.getElementById(k+'Status').textContent=done?'اكتمل':'متبقي '+ar(7-n);if(k==='sai')document.getElementById('saiDirection').textContent=done?'اكتمل السعي':(n%2===0?'الاتجاه التالي: الصفا ← المروة':'الاتجاه التالي: المروة ← الصفا');}
+function inc(k){localStorage.setItem(k,Math.min(7,get(k)+1));draw(k);}
+function reset(k){if(confirm('هل تريد إعادة ضبط العداد؟')){localStorage.setItem(k,0);draw(k);}}
+draw('tawaf');draw('sai');
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script>
+</body></html>
